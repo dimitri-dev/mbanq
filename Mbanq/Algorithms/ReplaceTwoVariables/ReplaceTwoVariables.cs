@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithms
+namespace mbanq.Algorithms
 {
     // (Eg: a = 5, b = 5; result: a = 5, b = 3)
     // Task description leaves a big question mark.

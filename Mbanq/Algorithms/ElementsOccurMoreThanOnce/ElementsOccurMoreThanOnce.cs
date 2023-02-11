@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace mbanq.Algorithms
 {
-
     public class ElementsOccurMoreThanOnce
     {
         // This is a solution which would be preffered by most C# developers.
