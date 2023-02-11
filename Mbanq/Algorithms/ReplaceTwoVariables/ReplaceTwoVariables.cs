@@ -12,8 +12,8 @@ namespace Algorithms
     public class ReplaceTwoVariables
     {
         // Classic "dumb" way to go about it.
-        // This code may cause an overflow for an integer value and it will produce wrong results at that point.
-        public void SwapNumbersUnsafe(ref int a, ref int b)
+        // This code may cause an overflow for a large value and it will produce wrong results at that point.
+        public void SwapNumbersUnsafe(ref ulong a, ref ulong b)
         {
             if (a == b) // Try to short circuit to avoid unnecessary calculations
                 return;
@@ -24,25 +24,25 @@ namespace Algorithms
 
         // This violates the task description (usage of additional variable) but it is actually safe.
         // Also, preferred way to handle swaps - due to readability.
-        public void SwapNumbersSafe(ref int a, ref int b)
+        public void SwapNumbersSafe(ref ulong a, ref ulong b)
         {
             if (a == b) // Try to short circuit to avoid unnecessary calculations
                 return;
 
-            int temp = a;
+            ulong temp = a;
             a = b;
             b = temp;
         }
 
         // This does not violate the task description from an above-eye view - but Interlocked uses a temp value internally.
         // So technically not a task description violation from my end? :thinking:
-        public void SwapNumbersInterlocked(ref int a, ref int b)
+        public void SwapNumbersInterlocked(ref ulong a, ref ulong b)
         {
             b = Interlocked.Exchange(ref a, b);
         }
 
         // Swapping with tuple deconstruction
-        public void SwapNumbersDeconstruction(ref int a, ref int b)
+        public void SwapNumbersDeconstruction(ref ulong a, ref ulong b)
         {
             (a, b) = (b, a);
         }
