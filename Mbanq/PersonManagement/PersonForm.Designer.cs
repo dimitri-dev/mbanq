@@ -65,17 +65,17 @@
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ultraButton1 = new Infragistics.Win.Misc.UltraButton();
-            this.ultraButton2 = new Infragistics.Win.Misc.UltraButton();
-            this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
-            this.ultraLabel2 = new Infragistics.Win.Misc.UltraLabel();
             this.ultraLabel3 = new Infragistics.Win.Misc.UltraLabel();
+            this.ultraLabel2 = new Infragistics.Win.Misc.UltraLabel();
+            this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
+            this.btn_Exit = new Infragistics.Win.Misc.UltraButton();
+            this.btn_CreatePerson = new Infragistics.Win.Misc.UltraButton();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -266,7 +266,7 @@
             this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 78);
-            this.ultraGrid1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ultraGrid1.Margin = new System.Windows.Forms.Padding(0);
             this.ultraGrid1.Name = "ultraGrid1";
             this.ultraGrid1.Size = new System.Drawing.Size(1904, 1187);
             this.ultraGrid1.TabIndex = 0;
@@ -286,73 +286,13 @@
             this.panel1.Controls.Add(this.ultraLabel3);
             this.panel1.Controls.Add(this.ultraLabel2);
             this.panel1.Controls.Add(this.ultraLabel1);
-            this.panel1.Controls.Add(this.ultraButton2);
-            this.panel1.Controls.Add(this.ultraButton1);
+            this.panel1.Controls.Add(this.btn_Exit);
+            this.panel1.Controls.Add(this.btn_CreatePerson);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1904, 78);
             this.panel1.TabIndex = 1;
-            // 
-            // ultraButton1
-            // 
-            this.ultraButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance26.BackColor = System.Drawing.Color.MediumSlateBlue;
-            appearance26.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            appearance26.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
-            appearance26.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            appearance26.TextHAlignAsString = "Center";
-            appearance26.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
-            this.ultraButton1.Appearance = appearance26;
-            this.ultraButton1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
-            this.ultraButton1.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraButton1.Location = new System.Drawing.Point(1715, 3);
-            this.ultraButton1.Name = "ultraButton1";
-            this.ultraButton1.Size = new System.Drawing.Size(177, 34);
-            this.ultraButton1.TabIndex = 0;
-            this.ultraButton1.Text = "New Person";
-            this.ultraButton1.Click += new System.EventHandler(this.ultraButton1_Click);
-            // 
-            // ultraButton2
-            // 
-            this.ultraButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance25.BackColor = System.Drawing.Color.MediumSlateBlue;
-            appearance25.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            appearance25.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
-            appearance25.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            appearance25.TextHAlignAsString = "Center";
-            appearance25.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
-            this.ultraButton2.Appearance = appearance25;
-            this.ultraButton2.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
-            this.ultraButton2.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraButton2.Location = new System.Drawing.Point(1715, 43);
-            this.ultraButton2.Name = "ultraButton2";
-            this.ultraButton2.Size = new System.Drawing.Size(177, 32);
-            this.ultraButton2.TabIndex = 1;
-            this.ultraButton2.Text = "Exit";
-            this.ultraButton2.Click += new System.EventHandler(this.ultraButton2_Click);
-            // 
-            // ultraLabel1
-            // 
-            this.ultraLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ultraLabel1.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel1.Location = new System.Drawing.Point(12, 11);
-            this.ultraLabel1.Name = "ultraLabel1";
-            this.ultraLabel1.Size = new System.Drawing.Size(281, 23);
-            this.ultraLabel1.TabIndex = 2;
-            this.ultraLabel1.Text = "MBANQ";
-            // 
-            // ultraLabel2
-            // 
-            this.ultraLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ultraLabel2.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel2.Location = new System.Drawing.Point(12, 43);
-            this.ultraLabel2.Name = "ultraLabel2";
-            this.ultraLabel2.Size = new System.Drawing.Size(281, 23);
-            this.ultraLabel2.TabIndex = 3;
-            this.ultraLabel2.Text = "Neven Marić";
             // 
             // ultraLabel3
             // 
@@ -367,6 +307,66 @@
             this.ultraLabel3.Text = "Person Management";
             this.ultraLabel3.WrapText = false;
             // 
+            // ultraLabel2
+            // 
+            this.ultraLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraLabel2.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel2.Location = new System.Drawing.Point(12, 43);
+            this.ultraLabel2.Name = "ultraLabel2";
+            this.ultraLabel2.Size = new System.Drawing.Size(281, 23);
+            this.ultraLabel2.TabIndex = 3;
+            this.ultraLabel2.Text = "Neven Marić";
+            // 
+            // ultraLabel1
+            // 
+            this.ultraLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraLabel1.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel1.Location = new System.Drawing.Point(12, 11);
+            this.ultraLabel1.Name = "ultraLabel1";
+            this.ultraLabel1.Size = new System.Drawing.Size(281, 23);
+            this.ultraLabel1.TabIndex = 2;
+            this.ultraLabel1.Text = "MBANQ";
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance25.BackColor = System.Drawing.Color.MediumSlateBlue;
+            appearance25.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            appearance25.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
+            appearance25.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            appearance25.TextHAlignAsString = "Center";
+            appearance25.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
+            this.btn_Exit.Appearance = appearance25;
+            this.btn_Exit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
+            this.btn_Exit.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(1715, 43);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(177, 32);
+            this.btn_Exit.TabIndex = 1;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // btn_CreatePerson
+            // 
+            this.btn_CreatePerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance26.BackColor = System.Drawing.Color.MediumSlateBlue;
+            appearance26.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            appearance26.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
+            appearance26.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            appearance26.TextHAlignAsString = "Center";
+            appearance26.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
+            this.btn_CreatePerson.Appearance = appearance26;
+            this.btn_CreatePerson.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
+            this.btn_CreatePerson.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreatePerson.Location = new System.Drawing.Point(1715, 3);
+            this.btn_CreatePerson.Name = "btn_CreatePerson";
+            this.btn_CreatePerson.Size = new System.Drawing.Size(177, 34);
+            this.btn_CreatePerson.TabIndex = 0;
+            this.btn_CreatePerson.Text = "New Person";
+            this.btn_CreatePerson.Click += new System.EventHandler(this.CreateButton_Click);
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -375,7 +375,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ultraGrid1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersonForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -394,8 +394,8 @@
         private System.Windows.Forms.BindingSource mbanqDataSetBindingSource;
         private System.Windows.Forms.BindingSource personBindingSource;
         private System.Windows.Forms.Panel panel1;
-        private Infragistics.Win.Misc.UltraButton ultraButton2;
-        private Infragistics.Win.Misc.UltraButton ultraButton1;
+        private Infragistics.Win.Misc.UltraButton btn_Exit;
+        private Infragistics.Win.Misc.UltraButton btn_CreatePerson;
         private Infragistics.Win.Misc.UltraLabel ultraLabel3;
         private Infragistics.Win.Misc.UltraLabel ultraLabel2;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;

@@ -15,7 +15,6 @@ namespace PersonManagement
     public partial class PersonForm : Form
     {
         private IPersonRepository personRepository = new PersonRepository();
-        private IEnumerable<IPerson> dataSource = new List<IPerson>();
 
         public PersonForm()
         {
@@ -24,18 +23,20 @@ namespace PersonManagement
 
         private async void PersonForm_Load(object sender, EventArgs e)
         {
-            dataSource = await personRepository.GetAllAsync();
-            personBindingSource.DataSource = dataSource;
+            personBindingSource.DataSource = await personRepository.GetAllAsync();
         }
 
-        private void ultraButton2_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ultraButton1_Click(object sender, EventArgs e)
+        private void CreateButton_Click(object sender, EventArgs e)
         {
-            // TODO: Implement new person creation
+            PersonEditForm form = new PersonEditForm(personRepository);
+            form.ShowDialog();
+
+            PersonForm_Load(sender, e);
         }
 
         private void ultraGrid1_InitializeRow(object sender, Infragistics.Win.UltraWinGrid.InitializeRowEventArgs e)
@@ -51,7 +52,6 @@ namespace PersonManagement
         {
             if (e.Cell.Value == "Delete")
             {
-                // TODO: Delete row logic
                 try
                 {
                     var personId = (Guid)e.Cell.Row.Cells["Id"].Value;
@@ -69,15 +69,18 @@ namespace PersonManagement
                 {
                     MessageBox.Show(ex.Message, "Issue Occured");
                 }
-
-                
             }
             
             if (e.Cell.Value == "Edit")
             {
-                // TODO: Edit row logic
-                MessageBox.Show("Edit button pressed");
+                var personId = (Guid)e.Cell.Row.Cells["Id"].Value;
+                var person = await personRepository.GetAsync(personId); // Easier to fetch from local than to parse rows, performance is questionable....
+
+                PersonEditForm form = new PersonEditForm(personRepository, person);
+                form.ShowDialog();
             }
+
+            PersonForm_Load(sender, e);
         }
 
         private string PersonDetails(IPerson person)
