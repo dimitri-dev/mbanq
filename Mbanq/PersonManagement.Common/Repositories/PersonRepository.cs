@@ -1,5 +1,6 @@
 ﻿using PersonManagement.Common.Filters.Interfaces;
 using PersonManagement.Models.Common;
+using PersonManagement.Models;
 using PersonManagement.DAL;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,8 @@ namespace PersonManagement.Common.Repositories
         /// <exception cref="System.NotImplementedException"></exception>
         public async Task<bool> CreateAsync(IPerson model)
         {
-            throw new NotImplementedException();
+            var person = context.Persons.Add((Person)model);
+            return await context.SaveChangesAsync() > 0;
         }
 
         /// <summary>
@@ -57,7 +59,7 @@ namespace PersonManagement.Common.Repositories
         public async Task<IEnumerable<IPerson>> GetAllAsync(IPersonFilter filter = null)
         {
             // TODO: filter implementation
-            return context.Persons.Local.ToBindingList();
+            return await context.Persons.ToListAsync();
         }
 
         /// <summary>
@@ -68,7 +70,7 @@ namespace PersonManagement.Common.Repositories
         /// <exception cref="System.NotImplementedException"></exception>
         public async Task<IPerson> GetAsync(Guid id)
         {
-            return context.Persons.FirstOrDefault(x => x.Id == id);
+            return await context.Persons.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         /// <summary>
@@ -80,7 +82,13 @@ namespace PersonManagement.Common.Repositories
         /// <exception cref="System.NotImplementedException"></exception>
         public async Task<IPerson> UpdateAsync(Guid id, IPerson model)
         {
-            throw new NotImplementedException();
+            var person = await context.Persons.FirstOrDefaultAsync(x => x.Id == id);
+            if (person != null)
+            {
+                person = (Person)model;
+                await context.SaveChangesAsync();
+            }
+            return person;
         }
     }
 }
