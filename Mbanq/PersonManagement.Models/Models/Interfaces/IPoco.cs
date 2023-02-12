@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PersonManagement.Common.Models.Interfaces
+namespace PersonManagement.Models.Common
 {
     /// <summary>
     /// IPoco interface

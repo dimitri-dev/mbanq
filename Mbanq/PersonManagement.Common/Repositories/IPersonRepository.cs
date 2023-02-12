@@ -1,5 +1,5 @@
 ﻿using PersonManagement.Common.Filters.Interfaces;
-using PersonManagement.Common.Models.Interfaces;
+using PersonManagement.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

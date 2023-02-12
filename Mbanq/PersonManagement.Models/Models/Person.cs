@@ -1,4 +1,4 @@
-﻿using PersonManagement.Common.Models.Interfaces;
+﻿using PersonManagement.Models.Common;
 using System;
 
 namespace PersonManagement.Models
@@ -15,6 +15,14 @@ namespace PersonManagement.Models
         /// The identifier.
         /// </value>
         public Guid Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the oib.
+        /// </summary>
+        /// <value>
+        /// The oib.
+        /// </value>
+        public string OIB { get; set; }
 
         /// <summary>
         /// Gets or sets the name.

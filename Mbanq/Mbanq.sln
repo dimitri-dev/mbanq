@@ -5,9 +5,13 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{2498E8AF-4130-4E8C-BA37-38A02725F2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement.Common", "PersonManagement.Common\PersonManagement.Common.csproj", "{E50BC112-095D-41AC-BD73-8685D47062CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonManagement.Common", "PersonManagement.Common\PersonManagement.Common.csproj", "{E50BC112-095D-41AC-BD73-8685D47062CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{0AA05BD4-361E-4AE3-8B8B-132D99BE534D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement.DAL", "PersonManagement.DAL\PersonManagement.DAL.csproj", "{CA54A8E0-B27C-4715-BAD9-522E364331BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement.Models", "PersonManagement.Models\PersonManagement.Models.csproj", "{ABEACA3F-E464-4823-AC30-F7EC4B632152}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{0AA05BD4-361E-4AE3-8B8B-132D99BE534D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA05BD4-361E-4AE3-8B8B-132D99BE534D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA05BD4-361E-4AE3-8B8B-132D99BE534D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA54A8E0-B27C-4715-BAD9-522E364331BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA54A8E0-B27C-4715-BAD9-522E364331BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA54A8E0-B27C-4715-BAD9-522E364331BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA54A8E0-B27C-4715-BAD9-522E364331BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEACA3F-E464-4823-AC30-F7EC4B632152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEACA3F-E464-4823-AC30-F7EC4B632152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEACA3F-E464-4823-AC30-F7EC4B632152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEACA3F-E464-4823-AC30-F7EC4B632152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

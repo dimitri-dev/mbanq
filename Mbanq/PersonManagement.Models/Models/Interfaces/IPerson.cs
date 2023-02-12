@@ -1,7 +1,15 @@
-﻿namespace PersonManagement.Common.Models.Interfaces
+﻿namespace PersonManagement.Models.Common
 {
     public interface IPerson : IPoco
     {
+        /// <summary>
+        /// Gets or sets the oib.
+        /// </summary>
+        /// <value>
+        /// The oib.
+        /// </value>
+        string OIB { get; set; }
+
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
