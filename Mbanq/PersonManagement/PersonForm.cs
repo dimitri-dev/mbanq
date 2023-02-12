@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PersonManagement.Common.Filters;
 
 namespace PersonManagement
 {
@@ -88,6 +89,13 @@ namespace PersonManagement
             return $"{person.OIB} - {person.Name} {person.Surname}\n"
                  + $"{person.Address} {person.Place}\n"
                  + $"{person.Phone} - {person.Mail}";
+        }
+
+        private async void input_searchPhrase_ValueChanged(object sender, EventArgs e)
+        {
+            var filter = new PersonFilter();
+            filter.SearchPhrase = input_searchPhrase.Text;
+            personBindingSource.DataSource = await personRepository.GetAllAsync(filter);
         }
     }
 }

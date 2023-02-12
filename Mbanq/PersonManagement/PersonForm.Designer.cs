@@ -76,9 +76,11 @@
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.btn_Exit = new Infragistics.Win.Misc.UltraButton();
             this.btn_CreatePerson = new Infragistics.Win.Misc.UltraButton();
+            this.input_searchPhrase = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_searchPhrase)).BeginInit();
             this.SuspendLayout();
             // 
             // ultraGrid1
@@ -283,6 +285,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel1.Controls.Add(this.input_searchPhrase);
             this.panel1.Controls.Add(this.ultraLabel3);
             this.panel1.Controls.Add(this.ultraLabel2);
             this.panel1.Controls.Add(this.ultraLabel1);
@@ -300,7 +303,7 @@
             appearance24.TextHAlignAsString = "Center";
             this.ultraLabel3.Appearance = appearance24;
             this.ultraLabel3.Font = new System.Drawing.Font("OMEGA CT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel3.Location = new System.Drawing.Point(817, 29);
+            this.ultraLabel3.Location = new System.Drawing.Point(809, 12);
             this.ultraLabel3.Name = "ultraLabel3";
             this.ultraLabel3.Size = new System.Drawing.Size(281, 37);
             this.ultraLabel3.TabIndex = 4;
@@ -367,6 +370,15 @@
             this.btn_CreatePerson.Text = "New Person";
             this.btn_CreatePerson.Click += new System.EventHandler(this.CreateButton_Click);
             // 
+            // input_searchPhrase
+            // 
+            this.input_searchPhrase.Font = new System.Drawing.Font("OMEGA CT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_searchPhrase.Location = new System.Drawing.Point(705, 44);
+            this.input_searchPhrase.Name = "input_searchPhrase";
+            this.input_searchPhrase.Size = new System.Drawing.Size(499, 29);
+            this.input_searchPhrase.TabIndex = 5;
+            this.input_searchPhrase.ValueChanged += new System.EventHandler(this.input_searchPhrase_ValueChanged);
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -384,6 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_searchPhrase)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,6 +413,7 @@
         private Infragistics.Win.Misc.UltraLabel ultraLabel3;
         private Infragistics.Win.Misc.UltraLabel ultraLabel2;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor input_searchPhrase;
     }
 }
 

@@ -23,5 +23,13 @@ namespace PersonManagement.Common.Filters.Interfaces
         /// The date created.
         /// </value>
         DateTimeRange? DateCreatedRange { get; set; }
+
+        /// <summary>
+        /// Gets or sets the search phrase.
+        /// </summary>
+        /// <value>
+        /// The search phrase.
+        /// </value>
+        string? SearchPhrase { get; set; }
     }
 }

@@ -69,6 +69,11 @@ namespace PersonManagement.Common.Repositories
                     filtered = filtered.Where(x => filter.Ids.Contains(x.Id));
                 }
 
+                if (!filter.SearchPhrase.IsNullOrEmpty())
+                {
+                    filtered = filtered.Where(x => x.OIB.Contains(filter.SearchPhrase) || x.Name.Contains(filter.SearchPhrase) || x.Surname.Contains(filter.SearchPhrase));
+                }
+
                 if (!filter.OIB.IsNullOrEmpty())
                 {
                     filtered = filtered.Where(x => x.OIB.Contains(filter.OIB));
