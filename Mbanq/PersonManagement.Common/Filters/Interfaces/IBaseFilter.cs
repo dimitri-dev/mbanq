@@ -15,12 +15,13 @@ namespace PersonManagement.Common.Filters.Interfaces
         /// The ids.
         /// </value>
         IEnumerable<Guid> Ids { get; set; }
+
         /// <summary>
         /// Gets or sets the date created.
         /// </summary>
         /// <value>
         /// The date created.
         /// </value>
-        DateTimeRange? DateCreated { get; set; }
+        DateTimeRange? DateCreatedRange { get; set; }
     }
 }

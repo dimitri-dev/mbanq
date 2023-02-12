@@ -24,6 +24,6 @@ namespace PersonManagement.Common.Filters
         /// <value>
         /// The date created.
         /// </value>
-        public DateTimeRange? DateCreated { get; set; }
+        public DateTimeRange? DateCreatedRange { get; set; }
     }
 }

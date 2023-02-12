@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.input_OIB = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.input_name = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
@@ -129,7 +129,7 @@
             this.input_phone.Location = new System.Drawing.Point(12, 327);
             this.input_phone.Name = "input_phone";
             this.input_phone.Size = new System.Drawing.Size(445, 29);
-            this.input_phone.TabIndex = 9;
+            this.input_phone.TabIndex = 11;
             // 
             // ultraLabel5
             // 
@@ -137,7 +137,7 @@
             this.ultraLabel5.Location = new System.Drawing.Point(12, 298);
             this.ultraLabel5.Name = "ultraLabel5";
             this.ultraLabel5.Size = new System.Drawing.Size(100, 23);
-            this.ultraLabel5.TabIndex = 8;
+            this.ultraLabel5.TabIndex = 10;
             this.ultraLabel5.Text = "Phone";
             // 
             // input_email
@@ -146,7 +146,7 @@
             this.input_email.Location = new System.Drawing.Point(12, 395);
             this.input_email.Name = "input_email";
             this.input_email.Size = new System.Drawing.Size(445, 29);
-            this.input_email.TabIndex = 11;
+            this.input_email.TabIndex = 13;
             // 
             // ultraLabel6
             // 
@@ -154,7 +154,7 @@
             this.ultraLabel6.Location = new System.Drawing.Point(12, 366);
             this.ultraLabel6.Name = "ultraLabel6";
             this.ultraLabel6.Size = new System.Drawing.Size(100, 23);
-            this.ultraLabel6.TabIndex = 10;
+            this.ultraLabel6.TabIndex = 12;
             this.ultraLabel6.Text = "Mail";
             // 
             // input_place
@@ -163,7 +163,7 @@
             this.input_place.Location = new System.Drawing.Point(12, 262);
             this.input_place.Name = "input_place";
             this.input_place.Size = new System.Drawing.Size(445, 29);
-            this.input_place.TabIndex = 13;
+            this.input_place.TabIndex = 9;
             // 
             // ultraLabel7
             // 
@@ -171,19 +171,19 @@
             this.ultraLabel7.Location = new System.Drawing.Point(12, 233);
             this.ultraLabel7.Name = "ultraLabel7";
             this.ultraLabel7.Size = new System.Drawing.Size(100, 23);
-            this.ultraLabel7.TabIndex = 12;
+            this.ultraLabel7.TabIndex = 8;
             this.ultraLabel7.Text = "Place";
             // 
             // btn_submit
             // 
             this.btn_submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            appearance3.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
-            appearance3.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            appearance3.TextHAlignAsString = "Center";
-            appearance3.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
-            this.btn_submit.Appearance = appearance3;
+            appearance1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            appearance1.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            appearance1.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
+            appearance1.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            appearance1.TextHAlignAsString = "Center";
+            appearance1.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
+            this.btn_submit.Appearance = appearance1;
             this.btn_submit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
             this.btn_submit.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_submit.Location = new System.Drawing.Point(37, 469);
@@ -196,13 +196,13 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            appearance4.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
-            appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            appearance4.TextHAlignAsString = "Center";
-            appearance4.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
-            this.btn_cancel.Appearance = appearance4;
+            appearance2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            appearance2.BackHatchStyle = Infragistics.Win.BackHatchStyle.None;
+            appearance2.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            appearance2.TextHAlignAsString = "Center";
+            appearance2.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
+            this.btn_cancel.Appearance = appearance2;
             this.btn_cancel.ButtonStyle = Infragistics.Win.UIElementButtonStyle.ButtonSoft;
             this.btn_cancel.Font = new System.Drawing.Font("OMEGA CT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.Location = new System.Drawing.Point(247, 469);

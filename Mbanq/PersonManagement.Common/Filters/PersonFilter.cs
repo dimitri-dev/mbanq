@@ -32,29 +32,5 @@ namespace PersonManagement.Common.Filters
         /// The surname.
         /// </value>
         public string? Surname { get; set; }
-
-        /// <summary>
-        /// Gets or sets the phone.
-        /// </summary>
-        /// <value>
-        /// The phone.
-        /// </value>
-        public string? Phone { get; set; }
-
-        /// <summary>
-        /// Gets or sets the address.
-        /// </summary>
-        /// <value>
-        /// The address.
-        /// </value>
-        public string? Address { get; set; }
-
-        /// <summary>
-        /// Gets or sets the mail.
-        /// </summary>
-        /// <value>
-        /// The mail.
-        /// </value>
-        public string? Mail { get; set; }
     }
 }

@@ -13,5 +13,14 @@ namespace PersonManagement.Common
             if (str == null || str.Length == 0) return true;
             else return false;
         }
+
+        public static bool IsInRange(this DateTime dateTime, DateTimeRange range)
+        {
+            if (dateTime == null || range == null) return false;
+            if (range.DateTimeFrom == null || range.DateTimeTo == null) return false;
+
+            if (range.DateTimeFrom <= dateTime && dateTime <= range.DateTimeTo) return true;
+            else return false;
+        }
     }
 }

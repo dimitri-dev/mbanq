@@ -58,8 +58,41 @@ namespace PersonManagement.Common.Repositories
         /// <exception cref="System.NotImplementedException"></exception>
         public async Task<IEnumerable<IPerson>> GetAllAsync(IPersonFilter filter = null)
         {
-            // TODO: filter implementation
-            return await context.Persons.ToListAsync();
+            var list = await context.Persons.ToListAsync();
+
+            if (filter != null)
+            {
+                var filtered = (IEnumerable<Person>)list;
+
+                if (filter.Ids != null && filter.Ids.Any())
+                { 
+                    filtered = filtered.Where(x => filter.Ids.Contains(x.Id));
+                }
+
+                if (!filter.OIB.IsNullOrEmpty())
+                {
+                    filtered = filtered.Where(x => x.OIB.Contains(filter.OIB));
+                }
+
+                if (!filter.Name.IsNullOrEmpty())
+                {
+                    filtered = filtered.Where(x => x.Name.Contains(filter.Name));
+                }
+
+                if (!filter.Surname.IsNullOrEmpty())
+                {
+                    filtered = filtered.Where(x => x.Surname.Contains(filter.Surname));
+                }
+
+                if (filter.DateCreatedRange != null)
+                {
+                    filtered = filtered.Where(x => x.DateCreated.IsInRange(filter.DateCreatedRange));
+                }
+
+                list = filtered.ToList();
+            }
+
+            return list; 
         }
 
         /// <summary>
