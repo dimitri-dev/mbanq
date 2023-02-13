@@ -37,6 +37,12 @@ namespace PersonManagement.Common.Repositories
             return await context.SaveChangesAsync() > 0;
         }
 
+        public async Task<bool> ReloadAsync()
+        {
+            await context.Persons.LoadAsync();
+            return true;
+        }
+
         /// <summary>
         /// Deletes the asynchronous.
         /// </summary>

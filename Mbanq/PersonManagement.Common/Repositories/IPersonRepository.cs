@@ -29,6 +29,12 @@ namespace PersonManagement.Common.Repositories
         Task<bool> CreateAsync(IPerson model);
 
         /// <summary>
+        /// Reloads the asynchronous.
+        /// </summary>
+        /// <returns></returns>
+        Task<bool> ReloadAsync();
+
+        /// <summary>
         /// Updates the asynchronous.
         /// </summary>
         /// <param name="id">The identifier.</param>

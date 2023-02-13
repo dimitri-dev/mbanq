@@ -93,7 +93,23 @@ namespace PersonManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Person " + (creationFlag ? "creation" : "update") + " failed.");
+                
+                if (ex.InnerException != null && ex.InnerException.InnerException != null)
+                {
+                    if (ex.InnerException.InnerException.Message.Contains("UNIQUE"))
+                    {
+                        MessageBox.Show("OIB already exists.", "Person " + (creationFlag ? "creation" : "update") + " failed.");
+                        await personRepository.ReloadAsync();
+
+                        // This code only if you assume the OIB repetition was accidental:
+                        if (creationFlag) model = null;
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Person " + (creationFlag ? "creation" : "update") + " failed.");
+                }
             }
 
             this.Close();
